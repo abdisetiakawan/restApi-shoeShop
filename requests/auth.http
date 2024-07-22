@@ -1,5 +1,5 @@
 ### Register Admin
-POST http://localhost:3000/auth/register/admin
+POST https://novianirwana-production.up.railway.app/auth/register/admin
 Content-Type: application/json
 
 {
@@ -10,7 +10,7 @@ Content-Type: application/json
 
 
 ### Register Consumer
-POST http://localhost:3000/auth/register/consumer
+POST https://novianirwana-production.up.railway.app/auth/register/consumer
 Content-Type: application/json
 
 {
@@ -22,7 +22,7 @@ Content-Type: application/json
 ###
 
 ### Register Seller
-POST http://localhost:3000/auth/register/seller
+POST https://novianirwana-production.up.railway.app/auth/register/seller
 Content-Type: application/json
 
 {
@@ -34,7 +34,7 @@ Content-Type: application/json
 ###
 
 ### Login Admin
-POST http://localhost:3000/auth/login/admin
+POST https://novianirwana-production.up.railway.app/auth/login/admin
 Content-Type: application/json
 
 {
@@ -45,7 +45,7 @@ Content-Type: application/json
 ###
 
 ### Login Consumer
-POST http://localhost:3000/auth/login/consumer
+POST https://novianirwana-production.up.railway.app/auth/login/consumer
 Content-Type: application/json
 
 {
@@ -56,7 +56,7 @@ Content-Type: application/json
 ###
 
 ### Login Seller
-POST http://localhost:3000/auth/login/seller
+POST https://novianirwana-production.up.railway.app/auth/login/seller
 Content-Type: application/json
 
 {
@@ -65,7 +65,7 @@ Content-Type: application/json
 }
 
 ### Tambahkan sepatu baru HARUS AKSES SELLER
-POST http://localhost:3000/seller/shoes
+POST https://novianirwana-production.up.railway.app/seller/shoes
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNlbGxlckBleGFtcGxlLmNvbSIsImlhdCI6MTcyMTM1ODcxOSwiZXhwIjoxNzIxMzYyMzE5fQ.Kf65Ped_jey3nKUuqUA-lu1COYUDHwGLpmocs1Go24c
 
@@ -82,7 +82,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNlbGxlc
 ###
 
 ### Perbarui stok sepatu HARUS AKSES SELLER
-PUT http://localhost:3000/seller/shoes/4
+PUT https://novianirwana-production.up.railway.app/seller/shoes/4
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNlbGxlckBleGFtcGxlLmNvbSIsImlhdCI6MTcyMTM1ODcxOSwiZXhwIjoxNzIxMzYyMzE5fQ.Kf65Ped_jey3nKUuqUA-lu1COYUDHwGLpmocs1Go24c
 
@@ -94,19 +94,19 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNlbGxlc
 
 
 ### Dapatkan daftar sepatu
-GET http://localhost:3000/consumer/shoes
+GET https://novianirwana-production.up.railway.app/consumer/shoes
 Content-Type: application/json
 
 ###
 
 ### Dapatkan detail sepatu
-GET http://localhost:3000/consumer/shoes/3
+GET https://novianirwana-production.up.railway.app/consumer/shoes/3
 Content-Type: application/json
 
 ###
 
 ### Buat pembayaran baru
-POST http://localhost:3000/consumer/payments
+POST https://novianirwana-production.up.railway.app/consumer/payments
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNvbnN1bWVyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzIxMzU5MTc0LCJleHAiOjE3MjEzNjI3NzR9.0T42cAs0Xh2fnPOy9HCPFQF_KkbmamTWnvwR8oWb3fw
 
@@ -128,10 +128,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNvbnN1b
 }
 
 ### Get Sales Report
-GET http://localhost:3000/admin/sales-report
+GET https://novianirwana-production.up.railway.app/admin/sales-report
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRkZEBleGFtcGxlLmNvbSIsImlhdCI6MTcyMTM5MzE4OSwiZXhwIjoxNzIxMzk2Nzg5fQ.dnIJ20fp6Bz15t0QnvYXAEPOLwrqjIpPrY9LcPPjvFU
 
 ### Get Stock Status
-GET http://localhost:3000/admin/stock-status
+GET https://novianirwana-production.up.railway.app/admin/stock-status
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRkZEBleGFtcGxlLmNvbSIsImlhdCI6MTcyMTM5MzE4OSwiZXhwIjoxNzIxMzk2Nzg5fQ.dnIJ20fp6Bz15t0QnvYXAEPOLwrqjIpPrY9LcPPjvFU
 
