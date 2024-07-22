@@ -27,10 +27,15 @@ app.use("/consumer", consumerRouter);
 app.use("/seller", sellerRouter);
 app.use("/auth", authRoutes);
 
-// Sync Sequelize models with database
-sequelize.sync({ force: false }).then(() => {
-  console.log("Database & tables created!");
-});
+// Sync the database
+sequelize
+  .sync()
+  .then(() => {
+    console.log("Database synchronized");
+  })
+  .catch((err) => {
+    console.error("Error synchronizing database:", err);
+  });
 app.get("/", (req, res) => {
   res.send("Selamat datang di Aplikasi Jual Beli Sepatu by Novia Nirwana");
 });
