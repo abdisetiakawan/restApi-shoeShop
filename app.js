@@ -34,6 +34,9 @@ app.use("/auth", authRoutes);
 sequelize.sync({ force: false }).then(() => {
   console.log("Database & tables created!");
 });
+app.get("/", (req, res) => {
+  res.send("Selamat datang di Aplikasi Jual Beli Sepatu by Novia Nirwana");
+});
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
