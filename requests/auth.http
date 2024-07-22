@@ -1,0 +1,137 @@
+### Register Admin
+POST http://localhost:3000/auth/register/admin
+Content-Type: application/json
+
+{
+  "name": "Admin Name",
+  "email": "dddd@example.com",
+  "password": "adminpassword"
+}
+
+
+### Register Consumer
+POST http://localhost:3000/auth/register/consumer
+Content-Type: application/json
+
+{
+  "name": "Consumer Name",
+  "email": "consumer@example.com",
+  "password": "consumerpassword"
+}
+
+###
+
+### Register Seller
+POST http://localhost:3000/auth/register/seller
+Content-Type: application/json
+
+{
+  "name": "Seller Name",
+  "email": "seller@example.com",
+  "password": "sellerpassword"
+}
+
+###
+
+### Login Admin
+POST http://localhost:3000/auth/login/admin
+Content-Type: application/json
+
+{
+  "email": "ddd@example.com",
+  "password": "adminpassword"
+}
+
+###
+
+### Login Consumer
+POST http://localhost:3000/auth/login/consumer
+Content-Type: application/json
+
+{
+  "email": "consumer@example.com",
+  "password": "consumerpassword"
+}
+
+###
+
+### Login Seller
+POST http://localhost:3000/auth/login/seller
+Content-Type: application/json
+
+{
+  "email": "seller@example.com",
+  "password": "sellerpassword"
+}
+
+### Tambahkan sepatu baru HARUS AKSES SELLER
+POST http://localhost:3000/seller/shoes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNlbGxlckBleGFtcGxlLmNvbSIsImlhdCI6MTcyMTM1ODcxOSwiZXhwIjoxNzIxMzYyMzE5fQ.Kf65Ped_jey3nKUuqUA-lu1COYUDHwGLpmocs1Go24c
+
+{
+  "name": "NIKE JORDAN",
+  "description": "Newest model of Air Max",
+  "price": 150,
+  "SellerId": 1,
+  "size": 42,
+  "stock": 10,
+  "imageUrl": "http://example.com/image.jpg"
+}
+
+###
+
+### Perbarui stok sepatu HARUS AKSES SELLER
+PUT http://localhost:3000/seller/shoes/4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNlbGxlckBleGFtcGxlLmNvbSIsImlhdCI6MTcyMTM1ODcxOSwiZXhwIjoxNzIxMzYyMzE5fQ.Kf65Ped_jey3nKUuqUA-lu1COYUDHwGLpmocs1Go24c
+
+{
+  "stock": 50
+}
+
+###
+
+
+### Dapatkan daftar sepatu
+GET http://localhost:3000/consumer/shoes
+Content-Type: application/json
+
+###
+
+### Dapatkan detail sepatu
+GET http://localhost:3000/consumer/shoes/3
+Content-Type: application/json
+
+###
+
+### Buat pembayaran baru
+POST http://localhost:3000/consumer/payments
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNvbnN1bWVyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzIxMzU5MTc0LCJleHAiOjE3MjEzNjI3NzR9.0T42cAs0Xh2fnPOy9HCPFQF_KkbmamTWnvwR8oWb3fw
+
+{
+  "ConsumerId": 1,
+  "shoes": [
+    {
+      "id": 1,
+      "quantity": 2
+    },
+    {
+      "id": 2,
+      "quantity": 1
+    }
+  ],
+  "totalAmount": 300,
+  "paymentMethod": "Tunai",
+  "status":"Completed"
+}
+
+### Get Sales Report
+GET http://localhost:3000/admin/sales-report
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRkZEBleGFtcGxlLmNvbSIsImlhdCI6MTcyMTM5MzE4OSwiZXhwIjoxNzIxMzk2Nzg5fQ.dnIJ20fp6Bz15t0QnvYXAEPOLwrqjIpPrY9LcPPjvFU
+
+### Get Stock Status
+GET http://localhost:3000/admin/stock-status
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRkZEBleGFtcGxlLmNvbSIsImlhdCI6MTcyMTM5MzE4OSwiZXhwIjoxNzIxMzk2Nzg5fQ.dnIJ20fp6Bz15t0QnvYXAEPOLwrqjIpPrY9LcPPjvFU
+
