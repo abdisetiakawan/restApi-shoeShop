@@ -4,9 +4,29 @@ Content-Type: application/json
 
 {
   "name": "Admin Name",
-  "email": "dddd@example.com",
+  "email": "admin@example.com",
   "password": "adminpassword"
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### Register Consumer
@@ -14,10 +34,29 @@ POST https://novianirwana-production.up.railway.app/auth/register/consumer
 Content-Type: application/json
 
 {
-  "name": "Consumer Name",
-  "email": "consumer@example.com",
+  "name": "novia nirwana",
+  "email": "novianirwana@example.com",
   "password": "consumerpassword"
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ###
 
@@ -64,10 +103,18 @@ Content-Type: application/json
   "password": "sellerpassword"
 }
 
+
+
+
+
+
+
+
+
 ### Tambahkan sepatu baru HARUS AKSES SELLER
 POST https://novianirwana-production.up.railway.app/seller/shoes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNlbGxlckBleGFtcGxlLmNvbSIsImlhdCI6MTcyMTM1ODcxOSwiZXhwIjoxNzIxMzYyMzE5fQ.Kf65Ped_jey3nKUuqUA-lu1COYUDHwGLpmocs1Go24c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNlbGxlckBleGFtcGxlLmNvbSIsImlhdCI6MTcyMTcwMzkwMSwiZXhwIjoxNzIxNzA3NTAxfQ.WI_Dpk-uTTYqc2al3C_qoLZh81yySYvQX_oCgwK3ZGU
 
 {
   "name": "NIKE JORDAN",
@@ -78,6 +125,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNlbGxlc
   "stock": 10,
   "imageUrl": "http://example.com/image.jpg"
 }
+
+
+
+
+
+
+
 
 ###
 
